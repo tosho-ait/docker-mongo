@@ -6,7 +6,7 @@ machine:
 dependencies:
   override:
     - docker info
-    - docker build --rm=false -t docker.netbits.io:443/netbits/mongo:3.5 .
+    - docker build --rm=false -t docker.netbits.io:443/netbits/mongo:3.5-secure .
 
 test:
   override:
@@ -17,4 +17,4 @@ deployment:
     branch: master
     commands:
       - docker login -u ${DOCKER_USER} -p ${DOCKER_PASS} -e ${DOCKER_MAIL} docker.netbits.io:443
-      - docker push docker.netbits.io:443/netbits/mongo:3.5
+      - docker push docker.netbits.io:443/netbits/mongo:3.5-secure
