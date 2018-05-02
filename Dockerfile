@@ -6,11 +6,7 @@ ENV AUTH yes
 ENV STORAGE_ENGINE wiredTiger
 ENV JOURNALING yes
 
-RUN cat /etc/mongodb.conf
-
-RUN mkdir -p /data/db2 \
-    && echo "dbpath = /data/db2" > /etc/mongodb.conf \
-    && chown -R mongodb:mongodb /data/db2
+RUN mkdir -p /data/db2 && chown -R mongodb:mongodb /data/db2
     
 ADD run.sh /run.sh
 ADD set_mongodb_password.sh /set_mongodb_password.sh
