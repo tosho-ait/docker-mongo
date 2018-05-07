@@ -1,7 +1,7 @@
 #!/bin/bash
 set -m
  
-cmd="mongod --storageEngine $STORAGE_ENGINE --rest --smallfiles --dbpath /data/db2"
+cmd="mongod --rest --smallfiles --dbpath /data/db2"
 
 if [ "$AUTH" == "yes" ]; then
     cmd="$cmd --auth"
