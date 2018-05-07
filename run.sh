@@ -1,8 +1,8 @@
 #!/bin/bash
 set -m
  
-mongodb_cmd="mongod --storageEngine $STORAGE_ENGINE"
-cmd="$mongodb_cmd --httpinterface --rest --master"
+cmd="mongod --storageEngine $STORAGE_ENGINE --rest --master"
+
 if [ "$AUTH" == "yes" ]; then
     cmd="$cmd --auth"
 fi
