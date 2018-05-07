@@ -1,4 +1,4 @@
-FROM mongo:3.4
+FROM mongo:3.5
  
 MAINTAINER <Tosho Ivanov>
  
