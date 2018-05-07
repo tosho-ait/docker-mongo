@@ -1,7 +1,7 @@
 #!/bin/bash
 set -m
  
-mongodb_cmd="mongod --storageEngine $STORAGE_ENGINE --dbpath /data/db1 --smallfiles --bind_ip_all"
+mongodb_cmd="mongod --storageEngine $STORAGE_ENGINE --dbpath /data/db2 --smallfiles --bind_ip_all"
 #cmd="$mongodb_cmd --httpinterface --rest --master"
 cmd="$mongodb_cmd"
 
