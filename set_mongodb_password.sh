@@ -2,12 +2,12 @@
  
 # Admin User
 MONGODB_ADMIN_USER=${MONGODB_ADMIN_USER:-"admin"}
-MONGODB_ADMIN_PASS=${MONGODB_ADMIN_PASS:-"4dmInP4ssw0rd"}
+MONGODB_ADMIN_PASS=${MONGODB_ADMIN_PASS:-"admin"}
  
 # Application Database User
 MONGODB_APPLICATION_DATABASE=${MONGODB_APPLICATION_DATABASE:-"admin"}
-MONGODB_APPLICATION_USER=${MONGODB_APPLICATION_USER:-"restapiuser"}
-MONGODB_APPLICATION_PASS=${MONGODB_APPLICATION_PASS:-"r3sT4pIp4ssw0rd"}
+MONGODB_APPLICATION_USER=${MONGODB_APPLICATION_USER:-"nouser"}
+MONGODB_APPLICATION_PASS=${MONGODB_APPLICATION_PASS:-"nouser"}
  
 # Wait for MongoDB to boot
 RET=1
@@ -42,7 +42,7 @@ sleep 1
 # If everything went well, add a file as a flag so we know in the future to not re-create the
 # users if we're recreating the container (provided we're using some persistent storage)
 echo "=> Done!"
-touch /data/db/.mongodb_password_set
+touch /data/db2/.mongodb_password_set
  
 echo "========================================================================"
 echo "You can now connect to the admin MongoDB server using:"
