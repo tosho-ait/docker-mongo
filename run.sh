@@ -1,7 +1,7 @@
 #!/bin/bash
 set -m
  
-cmd="mongod --storageEngine $STORAGE_ENGINE --rest --master"
+cmd="mongod --storageEngine $STORAGE_ENGINE --rest"
 
 if [ "$AUTH" == "yes" ]; then
     cmd="$cmd --auth"
